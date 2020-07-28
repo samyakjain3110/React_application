@@ -1,8 +1,11 @@
 import React from 'react'
 
-function FC(){
+function FC(props){
     return(
-        <h1>This is from functional component </h1>
+        <div>
+            <h1>This is from functional component </h1>
+            <h1>Received name for functional componen {props.name} </h1>
+        </div>
     )
 }
 

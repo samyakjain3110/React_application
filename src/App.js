@@ -8,8 +8,8 @@ function App() {
     <div className="App">
     <h1>hello world</h1>
     {/* to add another component inside another component use append as CC below */}
-      <CC />
-      <FC />
+      <CC name="samyakjain" username="sam3110" />
+      <FC name="sam" username="samyak" />
     </div>
   );
 }

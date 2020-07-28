@@ -1,15 +1,18 @@
 import React from 'react';
 import logo from './logo.svg'
 import './App.css';
-import CC from './class_components'
-import FC from './functional_components'
 function App() {
+
+  function openalert(){
+    alert('the button is pressed') ;
+  }
+
   return (
     <div className="App">
-    <h1>hello world</h1>
-    {/* to add another component inside another component use append as CC below */}
-      <CC name="samyakjain" username="sam3110" />
-      <FC name="sam" username="samyak" />
+    <h1>Event Handling in React </h1>
+    <button onClick={openalert}>click me</button>
+    <input type='text' onChange={() => {alert("changed the text");}}></input>
+    <h1 onMouseOver={()=> {alert("h1 tag is hovered");}}>h1 tag</h1>
     </div>
   );
 }

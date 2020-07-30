@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg'
 import './App.css';
 function App() {
 
-  function openalert(){
-    alert('the button is pressed') ;
-  }
+    const names = ["react", "angular" ,"vue"] 
+    const nameslist = names.map(name => {
+    return <h1>{name}</h1>
+  })
 
   return (
     <div className="App">
-    <h1>Event Handling in React </h1>
-    <button onClick={openalert}>click me</button>
-    <input type='text' onChange={() => {alert("changed the text");}}></input>
-    <h1 onMouseOver={()=> {alert("h1 tag is hovered");}}>h1 tag</h1>
+    <h1> Used map to display the names</h1>
+    {nameslist} 
     </div>
   );
 }
